@@ -5,4 +5,4 @@ This repository has some simple bash scripts that can be used to add aliases and
 
 Requires access to the Litus API.
 
-# Installation
+## Installation
