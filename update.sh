@@ -17,5 +17,5 @@ if [ ! -d $LISTS_DIRECTORY ]; then
 fi
 
 curl --data key=$API_KEY --output $ALIASES_FILE --silent $API_HOST/api/mail/getAliases/
-curl --data key=$API_KEY --silent http://litus/api/mail/getListsArchive/ | tar -x -C $LISTS_DIRECTORY
+curl --data key=$API_KEY --silent $API_HOST/api/mail/getListsArchive/ | tar -x -C $LISTS_DIRECTORY
 
