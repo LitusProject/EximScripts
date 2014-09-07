@@ -16,6 +16,5 @@ if [ ! -d $LISTS_DIRECTORY ]; then
     mkdir $LISTS_DIRECTORY
 fi
 
-curl --data key=$API_KEY --output $ALIASES_FILE --silent $API_HOST/api/mail/getAliases/
-curl --data key=$API_KEY --silent $API_HOST/api/mail/getListsArchive/ | tar -x -C $LISTS_DIRECTORY
-
+curl --output $ALIASES_FILE --silent $API_HOST/api/mail/aliases/?key=$API_KEY
+curl --silent $API_HOST/api/mail/listsArchive/?key=$API_KEY | tar -x -C $LISTS_DIRECTORY
